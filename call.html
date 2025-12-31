@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>ارتباط با ما</title>
+</head>
+<body>
+    <p class="title">ارتباط با ما</p>
+    <img src="icon-512.png" width="100px" style="margin:18px;border: 3px solid gold;border-radius:25px;" align="right">
+    <hr>
+   <a class="link" title="home" href="index.html"><img src="home.png"></a>
+    <a class="link" title="challanges" href="challange.html"><img src="challange.png"></a>
+    <a class="link" title="courses" href="course.html"><img src="video.png"></a>
+  </div>
+  <hr>
+  <div align="center" style="border-redius:30px;"> 
+      <img src="Code.jpg" width="580px" height="500px" style="border:3px solid gold;margin-top:35px;border-redius:30px;" >
+<textarea class="link" id="msg"
+          placeholder="نظر خود را وارد کنید"
+          style="width:500px;height:200px;font-size:18px;padding:10px;"></textarea>
+      <br>
+      <a class="link" onclick="send" href="">ارسال</a>
+
+<br>
+      <hr>     
+      <hr>
+ <br>
+ <div class="title">
+     <p class="paragraf">شما با زدن این لینک به سایت بله می روید<br> و سپس به شخصی سازنده می روید <br> و پیام می دهید</p>
+     <p class="paragraf"><bdi>@artinhdg : </bdi>در صورت نیاز آی دی من</p>
+     <a href="https://ble.ir/artinhdg" class="link">ارسال به بله</a>
+ </div>
+    
+
+<script>
+function sendToBale() {
+    let text = document.getElementById("msg").value;
+
+    if (text.trim() === "") {
+        alert("لطفاً پیام را وارد کنید");
+        return;
+    }
+
+    let url = "https://ble.ir/share?text=TEXT" + encodeURIComponent(text);
+    window.open(url, "_blank");
+}
+</script>
+      <script>
+      function send() {
+          alert("پیام شما به سازنده ارسال شد");
+      }
+      </script>
+</body>
+</html>
