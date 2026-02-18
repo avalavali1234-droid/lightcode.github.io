@@ -1,0 +1,542 @@
+@media (orientation: portrait) {
+
+    body {
+        font-size: 16px;
+        background-image: url('Code.jpg');
+        height: 30px;
+        color: white;
+        font-family: system-ui stack;
+    }
+
+    body::selection {
+        color: red;
+    }
+
+    .bar {
+        display: flex;
+        height: 70px;
+        align-items: center; /* مهم‌ترین خط */
+    }
+
+    .bar > div {
+        font-size: 1.4em;
+        color: white;
+        padding: 6px 9px; /* کمتر و متعادل */
+        text-align: center;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .bar form {
+        display: flex;
+        align-items: center;
+    }
+
+    .search {
+        background-color: yellowgreen;
+        border: 3px solid green;
+        transition: background-color 0.4s ease-in-out, border 0.4s ease-in-out;
+        height: 40px;
+        order: -1; /* جلوتر از بقیه دکمه‌ها */
+        margin-right: 10px;
+    }
+
+    .search:hover {
+        background-color: green;
+        border: 3px solid yellowgreen;
+    }
+
+    #search1 {
+        order: -1; /* جلوتر از بقیه دکمه‌ها */
+        margin-right: 10px;
+        width: 200px;
+        height: 40px;
+        border: 3px solid blue;
+        outline: none;
+        font-size: 18px;
+        text-align: center;
+        transition: none;
+    }
+
+    .login {
+        background-color: gray;
+        border: 3px solid black;
+        transition: background-color 0.4s ease-in-out, border 0.4s ease-in-out;
+    }
+
+    .login:hover {
+        background-color: black;
+        border: 3px solid gray;
+    }
+
+    .home {
+        background-color: skyblue;
+        margin-left: auto;
+        order: 0;
+        border: 3px solid blue;
+        transition: background-color 0.4s ease-in-out, border 0.4s ease-in-out;
+    }
+
+    .home:hover {
+        background-color: blue;
+        border: 3px solid skyblue;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .name {
+        font-size: 5em;
+        color: white;
+        display: flex;
+        text-shadow: 4px 4px 4px orange;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .aboutus {
+        font-size: 1.4em;
+    }
+
+    .aboutus b {
+        font-size: 3em;
+    }
+
+    .call {
+        background-color: pink;
+        border: 3px solid purple;
+        transition: background-color 0.4s ease-in-out, border 0.4s ease-in-out;
+        height: 40px;
+        position: fixed;
+        bottom: 13px;
+        right: 13px;
+        border-radius: 50px;
+    }
+
+    .call:hover {
+        background-color: purple;
+        border: 3px solid pink;
+    }
+
+    .course {
+        background-color: silver;
+        font-size: 1.4em;
+        display: flex;
+        width: 105%;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        border: 3px solid gray;
+        transition: background-color 0.4s ease-in-out, border 0.4s ease-in-out;
+        height: 50px;
+    }
+
+    .course:hover {
+        background-color: gray;
+        border: 3px solid silver;
+    }
+
+    .card {
+        font-size: 2em;
+    }
+
+    .signup {
+        background-color: orange;
+        border: 3px solid red;
+        transition: background-color 0.4s ease-in-out, border 0.4s ease-in-out;
+        height: 40px;
+        margin-right: 10px;
+    }
+
+    .signup:hover {
+        background-color: red;
+        border: 3px solid orange;
+    }
+
+    .download {
+        background-color: orange;
+        border: 3px solid red;
+        transition: background-color 0.4s ease-in-out, border 0.4s ease-in-out;
+        height: 40px;
+        margin-right: 10px;
+        padding: 20px;
+        border-radius: 50px;
+        font-size: 1.7em;
+    }
+
+    .download:hover {
+        background-color: red;
+        border: 3px solid orange;
+    }
+
+    .ai {
+        background-color: yellowgreen;
+        font-size: 1.4em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        width: 105%;
+        border: 3px solid green;
+        transition: background-color 0.4s ease-in-out, border 0.4s ease-in-out;
+        height: 50px;
+    }
+
+    .ai:hover {
+        background-color: green;
+        border: 3px solid yellowgreen;
+    }
+
+    #ctMenu {
+        display: none;
+        position: absolute;
+        margin-bottom: 105px;
+        margin-right: 150px;
+    }
+
+    #goShad {
+        display: inline;
+        background-color: orange;
+        padding: 5px;
+        border: 2px solid yellow;
+        border-radius: 10px;
+    }
+
+    #goBale {
+        display: inline;
+        background-color: green;
+        padding: 5px;
+        border: 2px solid white;
+        border-radius: 10px;
+    }
+
+    #textAboutUs {
+        background-color: gray;
+        display: block;
+        width: 90%;
+        height: auto;
+        margin: 3px;
+        padding: 10px;
+        border: 3px solid skyblue;
+        border-radius: 10px;
+    }
+
+    #followUs {
+        font-size: 30px;
+    }
+
+    #aparatLink {
+        color: gold;
+        text-decoration: underline;
+    }
+}
+.course, .ai { 
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#search1 {
+    font-size: 16px;
+}
+body {
+    overflow-x: hidden;
+}
+.bar {
+    height: 70px;
+}
+.bar > div {
+    padding: 6px 8px;
+    flex-shrink: 0;
+}
+#search1,
+#search1:focus {
+    font-size: 16px; /* حداقل برای جلوگیری از zoom خودکار موبایل */
+}
+.bar > div {
+    padding: 6px 8px;
+    flex-shrink: 0;
+    min-width: fit-content; /* جلوگیری از تغییر اندازه هنگام zoom */
+}
+.bar > div {
+    padding: 6px 8px;
+    flex-shrink: 0;
+    min-width: fit-content;
+}
+body {
+    overflow-x: hidden;
+}
+.bar {
+    height: 70px; /* ارتفاع ثابت */
+}
+.call {
+    background-color: pink;
+    border: 3px solid purple;
+    transition: background-color 0.4s ease-in-out, border 0.4s ease-in-out;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 13px;
+    right: 13px;
+    border-radius: 50%; /* دایره‌ای شدن */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+}
+.call:hover {
+    background-color: purple;
+    border: 3px solid pink;
+}
+
+.bar > div {
+    padding: 6px 8px;
+    flex-shrink: 0;
+    min-width: fit-content; 
+}
+.bar form {
+    flex-shrink: 0;
+}
+@media (orientation: landscape) {
+
+    body {
+        font-size: 16px;
+        background-image: url('Code.jpg');
+        height: 30px;
+        color: white;
+        font-family: system-ui stack;
+    }
+
+    body::selection {
+        color: red;
+    }
+
+    .bar {
+        display: flex;
+        height: 70px;
+        align-items: center;
+    }
+    
+
+    .bar > div {
+        font-size: 1.4em;
+        color: white;
+        padding: 6px 8px;
+        text-align: center;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .bar form {
+        display: flex;
+        align-items: center;
+    }
+
+    .search {
+        background-color: yellowgreen;
+        border: 3px solid green;
+        transition: background-color 0.4s ease-in-out, border 0.4s ease-in-out;
+        height: 40px;
+        order: -1;
+        margin-right: 10px;
+    }
+
+    .search:hover {
+        background-color: green;
+        border: 3px solid yellowgreen;
+    }
+
+    #search1 {
+        order: -1;
+        margin-right: 10px;
+        width: 200px;
+        height: 40px;
+        border: 3px solid blue;
+        outline: none;
+        font-size: 18px;
+        text-align: center;
+        transition: font-size 0.5s ease-in-out;
+    }
+
+    #search1:focus {
+        font-size: 1.25em;
+        border: 3px solid purple;
+    }
+
+    .login {
+        background-color: gray;
+        border: 3px solid black;
+        transition: background-color 0.4s ease-in-out, border 0.4s ease-in-out;
+    }
+
+    .login:hover {
+        background-color: black;
+        border: 3px solid gray;
+    }
+
+    .home {
+        background-color: skyblue;
+        margin-left: auto;
+        order: 0;
+        border: 3px solid blue;
+        transition: background-color 0.4s ease-in-out, border 0.4s ease-in-out;
+    }
+
+    .home:hover {
+        background-color: blue;
+        border: 3px solid skyblue;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .name {
+        font-size: 5em;
+        color: white;
+        display: flex;
+        text-shadow: 4px 4px 4px orange;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .aboutus {
+        font-size: 1.4em;
+    }
+
+    .aboutus b {
+        font-size: 3em;
+    }
+
+    .call {
+        background-color: pink;
+        border: 3px solid purple;
+        transition: background-color 0.4s ease-in-out, border 0.4s ease-in-out;
+        height: 40px;
+        position: fixed;
+        bottom: 13px;
+        right: 13px;
+        border-radius: 50px;
+    }
+
+    .call:hover {
+        background-color: purple;
+        border: 3px solid pink;
+    }
+
+    .course {
+        background-color: silver;
+        font-size: 1.4em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        border: 3px solid gray;
+        transition: background-color 0.4s ease-in-out, border 0.4s ease-in-out;
+        height: 50px;
+    }
+
+    .course:hover {
+        background-color: gray;
+        border: 3px solid silver;
+    }
+
+    .card {
+        font-size: 2em;
+    }
+
+    .signup {
+        background-color: orange;
+        border: 3px solid red;
+        transition: background-color 0.4s ease-in-out, border 0.4s ease-in-out;
+        height: 40px;
+        margin-right: 10px;
+    }
+
+    .signup:hover {
+        background-color: red;
+        border: 3px solid orange;
+    }
+
+    .download {
+        background-color: orange;
+        border: 3px solid red;
+        transition: background-color 0.4s ease-in-out, border 0.4s ease-in-out;
+        height: 40px;
+        margin-right: 10px;
+        padding: 20px;
+        border-radius: 50px;
+        font-size: 1.7em;
+    }
+
+    .download:hover {
+        background-color: red;
+        border: 3px solid orange;
+    }
+
+    .ai {
+        background-color: yellowgreen;
+        font-size: 1.4em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        border: 3px solid green;
+        transition: background-color 0.4s ease-in-out, border 0.4s ease-in-out;
+        height: 50px;
+    }
+
+    .ai:hover {
+        background-color: green;
+        border: 3px solid yellowgreen;
+    }
+
+    #ctMenu {
+        display: none;
+        position: absolute;
+        margin-bottom: 105px;
+        margin-right: 150px;
+    }
+
+    #goShad {
+        display: inline;
+        background-color: orange;
+        padding: 5px;
+        border: 2px solid yellow;
+        border-radius: 10px;
+    }
+
+    #goBale {
+        display: inline;
+        background-color: green;
+        padding: 5px;
+        border: 2px solid white;
+        border-radius: 10px;
+    }
+
+    #textAboutUs {
+        background-color: gray;
+        display: block;
+        width: 700px;
+        height: auto;
+        margin: 3px;
+        padding: 10px;
+        border: 3px solid skyblue;
+        border-radius: 10px;
+    }
+
+    #followUs {
+        font-size: 30px;
+    }
+
+    #aparatLink {
+        color: gold;
+        text-decoration: underline;
+    }
+}

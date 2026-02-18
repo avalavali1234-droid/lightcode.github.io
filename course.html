@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    
+    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="styles.css">
+    <title>Course</title>
+    <style>
+@keyframes rotatePhone {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(90deg); }
+  100% { transform: rotate(0deg); }
+}
+</style>
+</head>
+<body>
+    <!-- Rotate suggestion -->
+  <!--<div id="rotateBox" style="
+position:fixed;
+inset:0;
+background:rgba(0,0,0,0.9);
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+z-index:9999;
+color:white;
+font-family:Arial;
+">
+
+  <div style="
+    width:160px;
+    height:280px;
+    border:4px solid white;
+    border-radius:12px;
+    margin-bottom:20px;
+    animation:rotatePhone 2s infinite ease-in-out;
+  "></div>
+
+  <h1>Please rotate your device</h2>
+  <p style="font-size:2.2em;">For a better experience, use landscape mode.</p>
+
+</div>-->
+    <h1 class="name"><strong>
+        ℭ𝔬𝔲𝔯𝔰𝔢𝔰
+    </strong>
+    </h1>
+    <br>
+
+<div class="bar">
+
+    <form action="" onsubmit="return false;">
+        <br>
+        <input type="text" id="search1" placeholder="   search ..." onkeyup="searchItems()">
+    </form>
+
+<div class="home item"><a href="index.html">home</a></div><br>
+    &nbsp;&nbsp;
+<div class="login item"><a href="login.html">login</a></div><br>
+    &nbsp;&nbsp;
+<div class="signup item"><a href="signup.html">signup</a></div>
+<div class="search item">search</div>
+<div class="call item" id="ctBtn" onclick="toggleCT()">
+    CT
+    <div id="ctMenu" style="display:none; position:absolute; margin-bottom:105px;margin-right: 150px;">
+        <div onclick="goShad()" style="display: inline;background-color: orange;padding:5px;border: 2px solid yellow;border-radius: 10px;">Shad</div>
+        <hr>
+        <div onclick="goBale()" style="display: inline;background-color: green;padding:5px;border: 2px solid white;border-radius: 10px;">Bale</div>
+    </div>
+</div>
+
+</div><br>
+    <div class="course item"><a href="course.html">courses</a></div>
+    <br>
+    <div class="ai item"><a href="ai.html">talk to Hard-E ( OUR AI )</a></div>
+    <br>
+    <div class="pcard item">
+        <a href="Python.html">
+            <img src="Python.jpg" width="400px" height="250px">
+        </a>
+        
+        <br>
+        <strong>Introduction to Python</strong><br>
+        <hr>
+        teacher : <br>
+        <strong>Radin Sarlak</strong>
+        <hr>
+        type : <br>
+        <strong>video , mp4</strong>
+        <hr>
+        lang : <br>
+        <strong>persian</strong>
+    </div>
+    <br><hr><br>
+    <div class="pcard item">
+        <a href="html.html">
+            <img src="Html.jpg" width="400px" height="250px">
+        </a>
+        
+        <br>
+        <strong>html course</strong><br>
+        <hr>
+        teacher : <br>
+        <strong>Radin Sarlak</strong>
+        <hr>
+        type : <br>
+        <strong>video , mp4</strong>
+        <hr>
+        lang : <br>
+        <strong>persian</strong>
+    </div>
+    
+    
+<script>
+function searchItems() {
+    let input = document.getElementById("search1").value.toLowerCase();
+    let items = document.querySelectorAll(".item");
+
+    items.forEach(item => {
+        if (item.textContent.toLowerCase().includes(input)) {
+            item.style.display = "block";
+        } else {
+            item.style.display = "none";
+        }
+    });
+}
+</script>
+   
+    
+<script>
+function toggleCT() {
+    let menu = document.getElementById("ctMenu");
+    menu.style.display = (menu.style.display === "block") ? "none" : "block";
+}
+
+function goShad() {
+    window.open("https://shad.ir/radinsarlak", "_blank");
+}
+
+function goBale() {
+    window.open("https://web.bale.ai/@artinhdg", "_blank");
+}
+</script>
+<script>
+if (localStorage.getItem("loggedIn") === "true") {
+    let loginBtn = document.querySelector(".login a");
+    loginBtn.innerText = "Logout";
+    loginBtn.onclick = function () {
+        localStorage.clear();
+        location.reload();
+    };
+}
+</script>
+<script>
+let signupBtn = document.querySelector(".signup a");
+
+if (localStorage.getItem("signedUp") === "true") {
+    signupBtn.innerText = "Signout";
+    signupBtn.href = "#";
+    signupBtn.onclick = function () {
+        localStorage.removeItem("signedUp");
+        localStorage.removeItem("su_name");
+        localStorage.removeItem("su_user");
+        location.reload();
+    };
+}
+</script>
+<script>
+let rotateDismissed = false;
+
+function checkOrientation() {
+  if (rotateDismissed) return;
+
+  const box = document.getElementById("rotateBox");
+
+  if (window.innerHeight > window.innerWidth) {
+    box.style.display = "flex";
+  } else {
+    box.style.display = "none";
+  }
+}
+
+function dismissRotate() {
+  rotateDismissed = true;
+  document.getElementById("rotateBox").style.display = "none";
+}
+
+window.addEventListener("load", checkOrientation);
+window.addEventListener("resize", checkOrientation);
+</script>
+</body>
+</html>
